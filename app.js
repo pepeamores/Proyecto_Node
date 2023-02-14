@@ -1,14 +1,32 @@
-const express = require('express') //Requerimos Express
-const app = express() //Variable para utilizar lo que estamos requiriendo
-const port = 3005 //Habitualmente el 3000 para entornos locales
-//Cuando lo subamos a un servidor real, deberemos cambiarlo, COMO YA VEREMOS
+const express = require('express')
+const bodyParser  = require('body-parser');
+const app = express()
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+require ('dotenv').config()
+const port = process.env.PORT||3005
+//Conexión a base de datos
+//Variables que tendremos siempre:
+//Lo correcto será declararlas EN VARIABLES DE ENTORNO
+//para que nadie vea directamente nuestras credenciales
 
-//Vamos a recibir una petición realizada por el cliente mediante GET,
-//que como ya hemos visto y sabemos viene determinada por la URL
-app.use('/',require('/router/rutas'))
-app.listen(port, () => { //Nuevamente, usamos la función flecha
-  console.log(`Example app listening at http://localhost:${port}`)
-  //Es importante mostrar el puerto, ya que cuando esté en producción
-  //ese puerto será dinámico y habrá cambiado. Así podremos saber cual es
+//motor de plantilla
+app.set('views',__dirname + '/views');
+app.set('view engine' ,'ejs')
+
+//middleware
+app.use(express.static(__dirname + '/public'));
+
+//Llamadas a las rutas:
+
+app.use('/', require('./router/rutas'));
+
+app.use((req, res) => {
+  res.status(404).render("404", {
+      titulo: "404",
+      descripcion: "Titulo del sitio web"
+  })
 })
-
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
