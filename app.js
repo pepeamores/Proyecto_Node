@@ -5,7 +5,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 require ('dotenv').config()
 const port = process.env.PORT||3005
-//Conexión a base de datos
+//Conexión a base de datosnpm
 //Variables que tendremos siempre:
 //Lo correcto será declararlas EN VARIABLES DE ENTORNO
 //para que nadie vea directamente nuestras credenciales
