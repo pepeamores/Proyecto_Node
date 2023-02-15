@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
-const Shema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
-const pilotoShema = new Shema({
+const pilotoSchema = new Schema({
     nombre: String,
-    edad: Number,
     pais: String,
-    num_Carrera: Number,
-    victoria :Number,
-    podio: Number,
-    dorsal: Number
+    num_Carreras: String,
+    victoria :String,
+    podio: String,
+    dorsal: String,
+    escuderia: String
 })
 
-const Piloto = mongoose.model('piloto', pilotoShema, "piloto");
+const Piloto = mongoose.model('piloto', pilotoSchema, "piloto");
 
 module.exports = Piloto;

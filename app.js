@@ -37,6 +37,13 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', require('./router/rutas'));
 app.use('/circuito', require('./router/circuito'));
+app.use('/ferrari', require('./router/ferrari'));
+app.use('/mercedes', require('./router/mercedes'));
+app.use('/alpha', require('./router/alpha'));
+app.use('/mercedes', require('./router/mercedes'));
+app.use('/mercedes', require('./router/mercedes'));
+app.use('/mercedes', require('./router/mercedes'));
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
