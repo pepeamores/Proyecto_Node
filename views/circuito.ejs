@@ -1,0 +1,26 @@
+<%- include("template/cabecera", {tituloWeb: 'Circuito' }) %>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Kilometros</th>
+            <th scope="col">Curva</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (arrayCircuito.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayCircuito.forEach(circuito => { %>
+                <tr>
+                    <td><%= circuito.nombre %></td>
+                    <td><%= circuito.pais %></td>
+                    <td><%= circuito.ciudad %></td>
+                    <td><%= circuito.kilometros %></td>
+                    <td><%= circuito.curvas %></td>
+                </tr>
+            <% }) %>
+        <% } %>
+  </tbody>
+</table>

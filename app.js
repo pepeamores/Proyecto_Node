@@ -36,13 +36,8 @@ app.use(express.static(__dirname + '/public'));
 //Llamadas a las rutas:
 
 app.use('/', require('./router/rutas'));
+app.use('/circuito', require('./router/circuito'));
 
-app.use((req, res) => {
-  res.status(404).render("404", {
-      titulo: "404",
-      descripcion: "Titulo del sitio web"
-  })
-})
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

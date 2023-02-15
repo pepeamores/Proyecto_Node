@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const Shema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
-const circuitoShema = new Shema({
+const circuitoSchema = new Schema({
     nombre: String,
     pais: String,
     ciudad: String,
-    kilometros :Number,
-    curvas: Number,
+    kilometros : String,
+    curvas: Number
 })
 
-const Circuito = mongoose.model('circuito', circuitoShema, "circuito");
+const Circuito = mongoose.model('dbformula1', circuitoSchema, "circuito");
 
 module.exports = Circuito;
