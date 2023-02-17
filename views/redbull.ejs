@@ -1,14 +1,15 @@
 <%- include("template/cabecera", {tituloWeb: 'RedBull' }) %>
-    
+<style>
+    body{
+        background-image: url("/img/fondo1.png");        
+    }
+</style>
 <div class="container">
-    <div class="bg2 col-6">
-        <img src="img/redbull.png" alt="redbull" id="img" class="image">
-    </div>
     <div class="bg col-6">
         <% if (arrayEscuderia.length> 0) { %>
             <!--Haremos el foreach para recorrer el array-->
             <% arrayEscuderia.forEach(escuderia=> { %>
-                <p>
+                <p class="text-white">
                     <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1 con base en
                             Milton Keynes,
                             Inglaterra, propiedad de la empresa de la bebida energizante Red Bull GmbH. Cuando la
@@ -25,7 +26,7 @@
 <br>
 <br>
 <br>
-    <table class="table">
+    <table class="table text-white">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Nombre</th>
