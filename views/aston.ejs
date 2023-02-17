@@ -8,18 +8,19 @@
     background-size: cover;        
     }
 </style>
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Pais</th>
-            <th scope="col">Num_Carrera</th>
-            <th scope="col">Victorias</th>
-            <th scope="col">Podios</th>
-            <th scope="col">Dorsal</th>
-            <th scope="col">Escuderia</th>
-        </tr>
-    </thead>
+<div class="table-responsive">
+    <table class=" text-white table align-middle">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Pais</th>
+                <th scope="col">Num_Carrera</th>
+                <th scope="col">Victorias</th>
+                <th scope="col">Podios</th>
+                <th scope="col">Dorsal</th>
+                <th scope="col">Escuderia</th>
+            </tr>
+        </thead>
     <tbody>
         
         <% if (arrayPiloto.length> 0) { %>
@@ -38,4 +39,5 @@
         <% } %>
   </tbody>
 </table>
+</div>
 <a class="nav-link" href="/">Volver al inicio</a>
