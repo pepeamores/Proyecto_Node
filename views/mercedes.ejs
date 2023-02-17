@@ -1,10 +1,7 @@
 <%- include("template/cabecera", {tituloWeb: 'Mercedes' }) %>
 
-    <div class="container">
-        <div class="bg2 col-6">
-            <img src="img/mercedes.png" alt="rb" class="merc">
-        </div>
-        <div class="bg col-6">
+    <div class="container">        
+        <div class="bg col-12">
             <% if (arrayEscuderia.length> 0) { %>
                 <!--Haremos el foreach para recorrer el array-->
                 <% arrayEscuderia.forEach(escuderia=> { %>
