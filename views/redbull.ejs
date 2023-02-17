@@ -1,25 +1,26 @@
 <%- include("template/cabecera", {tituloWeb: 'RedBull' }) %>
     
 <div class="container">
-    <div>
-        <img src="img/redbull.png" alt="redbull" id="img">
+    <div class="bg2 col-6">
+        <img src="img/redbull.png" alt="redbull" id="img" class="image">
     </div>
-    <div class="container2">
+    <div class="bg col-6">
         <% if (arrayEscuderia.length> 0) { %>
-                <!--Haremos el foreach para recorrer el array-->
-                <% arrayEscuderia.forEach(escuderia=> { %>
-                    <p>
-                        <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1 con base en
-                                Milton Keynes,
-                                Inglaterra, propiedad de la empresa de la bebida energizante Red Bull GmbH. Cuando la
-                                propietaria anterior de este equipo Ford Motor Company, anunció su retirada de la
-                                máxima categoría del automovilismo.Compite en F1 desde  <%= escuderia.fundacion %> y en sus
-                                    dos
-                                    primeras temporadas participaba con licencia británica.
-                    </p>
-                    <% }) %>
-                        <% } %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayEscuderia.forEach(escuderia=> { %>
+                <p>
+                    <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1 con base en
+                            Milton Keynes,
+                            Inglaterra, propiedad de la empresa de la bebida energizante Red Bull GmbH. Cuando la
+                            propietaria anterior de este equipo Ford Motor Company, anunció su retirada de la
+                            máxima categoría del automovilismo.Compite en F1 desde  <%= escuderia.fundacion %> y en sus
+                                dos
+                                primeras temporadas participaba con licencia británica.
+                </p>
+                <% }) %>
+                    <% } %>
     </div>
+        
 </div>
 <br>
 <br>

@@ -11,13 +11,17 @@ section{
     width: 100%;
 }
 .container{
-    float: left;
+    width: 100%;
+    padding: 10px;
 }
-.container2{
-    width: 40%;
-    margin-left: 392px;
-    margin-top: 67px;
-    position: absolute;
+
+.bg2{
+    width: 100%;
+    margin-left: 20vw;
+}
+.bg{
+    margin-top: 20%;
+    width: 100%;
 }
 #img{
     float: left;
