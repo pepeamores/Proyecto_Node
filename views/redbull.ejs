@@ -1,4 +1,29 @@
 <%- include("template/cabecera", {tituloWeb: 'RedBull' }) %>
+    
+<div class="container">
+    <div>
+        <img src="img/redbull.png" alt="redbull" id="img">
+    </div>
+    <div class="container2">
+        <% if (arrayEscuderia.length> 0) { %>
+                <!--Haremos el foreach para recorrer el array-->
+                <% arrayEscuderia.forEach(escuderia=> { %>
+                    <p>
+                        <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1 con base en
+                                Milton Keynes,
+                                Inglaterra, propiedad de la empresa de la bebida energizante Red Bull GmbH. Cuando la
+                                propietaria anterior de este equipo Ford Motor Company, anunció su retirada de la
+                                máxima categoría del automovilismo.Compite en F1 desde  <%= escuderia.fundacion %> y en sus
+                                    dos
+                                    primeras temporadas participaba con licencia británica.
+                    </p>
+                    <% }) %>
+                        <% } %>
+    </div>
+</div>
+<br>
+<br>
+<br>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -43,36 +68,6 @@
         </tbody>
     </table>
     <br>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Pais</th>
-                <th scope="col">Motor</th>
-                <th scope="col">Fecha Fundacion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% if (arrayEscuderia.length> 0) { %>
-                <!--Haremos el foreach para recorrer el array-->
-                <% arrayEscuderia.forEach(escuderia=> { %>
-                    <tr>
-                        <td>
-                            <%= escuderia.nombre %>
-                        </td>
-                        <td>
-                            <%= escuderia.pais %>
-                        </td>
-                        <td>
-                            <%= escuderia.motor %>
-                        </td>
-                        <td>
-                            <%= escuderia.fundacion %>
-                        </td>
-                    </tr>
-                    <% }) %>
-                        <% } %>
-        </tbody>
-    </table>
+
 
     <a class="nav-link" href="/">Volver al inicio</a>
