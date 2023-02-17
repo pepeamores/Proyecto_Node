@@ -8,6 +8,25 @@
     background-size: cover;  
     }
 </style>
+<div class="container">
+    <div class="bg col-6">
+        <% if (arrayEscuderia.length> 0) { %>
+            <!--Haremos el foreach para recorrer el array-->
+            <% arrayEscuderia.forEach(escuderia=> { %>
+                <p class="text-white">
+                    <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1 con base en
+                            Milton Keynes,
+                            Inglaterra, propiedad de la empresa de la bebida energizante Red Bull GmbH. Cuando la
+                            propietaria anterior de este equipo Ford Motor Company, anunció su retirada de la
+                            máxima categoría del automovilismo.Compite en F1 desde  <%= escuderia.fundacion %> y en sus
+                                dos
+                                primeras temporadas participaba con licencia británica.
+                </p>
+                <% }) %>
+                    <% } %>
+    </div>
+        
+</div>
 <div class="table-responsive">
     <table class=" text-white table align-middle">
         <thead class="thead-dark">
