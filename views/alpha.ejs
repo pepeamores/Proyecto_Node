@@ -13,16 +13,11 @@
             <% if (arrayEscuderia.length> 0) { %>
                 <!--Haremos el foreach para recorrer el array-->
                 <% arrayEscuderia.forEach(escuderia=> { %>
-                    <p class="text-white">La escuderia <%= escuderia.nombre %> es una de las automotrices más exitosas
-                            de la
-                            Fórmula
-                            1,
-                            considerada
-                            uno de los cuatro equipos con mejores resultados, junto con Williams, Ferrari y McLaren. Su
-                            fundacion dió lugar en <%= escuderia.fundacion %>.
+                    <p class="text-white">La escuderia <%= escuderia.nombre %> es la sucesora de Toro Rosso, nacio en <%= escuderia.fundacion %>.
+                        Siempre han tenido actuaciones buenas, pero su principal objetivo es ayudar a Red Bull
                     </p>
 
-                    <p class="text-white">Con sede en <%= escuderia.pais %>, este año intentarán luchar el campeonato
+                    <p class="text-white">Con sede en <%= escuderia.pais %>, este año intentarán luchar por liderar la tabla media
                             con su
                             mejorado motor
                             <%= escuderia.motor %>. El equipo <%= escuderia.nombre %> tuvo problemas el año pasado pero
