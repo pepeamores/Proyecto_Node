@@ -40,9 +40,13 @@ app.use('/circuito', require('./router/circuito'));
 app.use('/ferrari', require('./router/ferrari'));
 app.use('/mercedes', require('./router/mercedes'));
 app.use('/alpha', require('./router/alpha'));
-app.use('/mercedes', require('./router/mercedes'));
-app.use('/mercedes', require('./router/mercedes'));
-app.use('/mercedes', require('./router/mercedes'));
+app.use('/alpine', require('./router/alpine'));
+app.use('/aston', require('./router/aston'));
+app.use('/williams', require('./router/williams'));
+app.use('/redbull', require('./router/redbull'));
+app.use('/haas', require('./router/haas'));
+app.use('/alfaromeo', require('./router/alfaromeo'));
+app.use('/mclaren', require('./router/mclaren'));
 
 
 app.listen(port, () => {
