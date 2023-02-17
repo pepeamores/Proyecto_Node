@@ -99,9 +99,17 @@ section{
     margin-top: 20px;
 }
 .ci{
-    color: black;
-    margin-left: 3%;
+    color: rgb(255, 255, 255);
+    padding: 10px;
     font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ca{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 25px;
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .merc{
     width: 20%;
