@@ -1,1 +1,49 @@
 <%- include("template/cabecera", {tituloWeb: 'Campeonato' }) %>
+<style>
+    body{
+        background-image: url("/img/fondo13.jpg");
+        background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;        
+    }
+</style>
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Temporada</th>
+                <th scope="col">Piloto Campeon</th>
+                <th scope="col">Puntos Piloto</th>
+                <th scope="col">Escuderia Campeona</th>
+                <th scope="col">Puntos Escuderia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (arrayCampeonato.length> 0) { %>
+                <!--Haremos el foreach para recorrer el array-->
+                <% arrayCampeonato.forEach(campeonato=> { %>
+                    <tr>
+                        <td>
+                            <%= campeonato.nombre %>
+                        </td>
+                        <td>
+                            <%= campeonato.pais %>
+                        </td>
+                        <td>
+                            <%= campeonato.ciudad %>
+                        </td>
+                        <td>
+                            <%= campeonato.kilometros %>
+                        </td>
+                        <td>
+                            <%= campeonato.curvas %>
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <% } %>
+        </tbody>
+    </table>
+</div>
+
+<a class="nav-link" href="/">Volver al inicio</a>

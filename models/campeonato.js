@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
-const Shema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
-const campeonatoShema = new Shema({
-    anio: Number,
-    piloto_G: String,
-    escuderia_G: String,
-    punto :Number
+const campeonatoSchema = new Schema({
+    temporada: String,
+    piloto_campeon: String,
+    puntos_piloto: String,
+    escuderia_campeon: String,
+    puntos_escuderia : String
 })
 
-const Campeonato = mongoose.model('campeonato', campeonatoShema, "campeonato");
+const Campeonato = mongoose.model('campeonato', campeonatoSchema, "campeonato");
 
 module.exports = Campeonato;

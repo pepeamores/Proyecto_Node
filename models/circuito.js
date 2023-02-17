@@ -6,7 +6,7 @@ const circuitoSchema = new Schema({
     pais: String,
     ciudad: String,
     kilometros : String,
-    curvas: Number
+    curvas: String
 })
 
 const Circuito = mongoose.model('dbformula1', circuitoSchema, "circuito");

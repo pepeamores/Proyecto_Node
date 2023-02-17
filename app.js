@@ -6,15 +6,11 @@ app.use(bodyParser.json());
 require ('dotenv').config()
 const port = process.env.PORT||3005
 //Conexión a base de datosnpm
-//Variables que tendremos siempre:
-//Lo correcto será declararlas EN VARIABLES DE ENTORNO
-//para que nadie vea directamente nuestras credenciales
 const mongoose = require('mongoose');
 //Variables que tendremos siempre:
 //Lo correcto será declararlas EN VARIABLES DE ENTORNO
 /*
 PORT=4000
-
 DB_USER=cursonode
 DB_PASSWORD=8fNCez6Emijrr3tk
 DB_NAME=dbformula1
@@ -47,6 +43,7 @@ app.use('/redbull', require('./router/redbull'));
 app.use('/haas', require('./router/haas'));
 app.use('/alfaromeo', require('./router/alfaromeo'));
 app.use('/mclaren', require('./router/mclaren'));
+app.use('/campeonato', require('./router/campeonato'));
 
 
 app.listen(port, () => {
