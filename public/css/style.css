@@ -21,6 +21,12 @@ section{
     margin-right: 3%;
     width: 3%;
 }
+#mclaren{
+    float: right;
+    width: 9%;
+    margin-top: 1.2%;
+    margin-right: 1.5%;
+}
 #alph, #alp{
     float: right;
     margin-top: 3%;
