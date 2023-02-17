@@ -22,6 +22,7 @@ section{
 .bg{
     margin-top: 20%;
     width: 100%;
+    
 }
 #img{
     float: left;
@@ -100,4 +101,9 @@ section{
     color: black;
     margin-left: 3%;
     font-size: 25px;
+}
+.merc{
+    width: 20%;
+    margin-left: 35px;
+    margin-bottom: -15%;
 }
