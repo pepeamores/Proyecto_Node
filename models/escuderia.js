@@ -5,6 +5,7 @@ const escuderiaSchema = new Schema({
     nombre: String,
     pais :String,
     motor: String,
+    fundacion: String
 })
 
 const Escuderia = mongoose.model('escuderia', escuderiaSchema, "escuderia");
