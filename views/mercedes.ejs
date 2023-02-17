@@ -1,32 +1,67 @@
 <%- include("template/cabecera", {tituloWeb: 'Mercedes' }) %>
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Pais</th>
-            <th scope="col">Num_Carrera</th>
-            <th scope="col">Victorias</th>
-            <th scope="col">Podios</th>
-            <th scope="col">Dorsal</th>
-            <th scope="col">Escuderia</th>
-        </tr>
-    </thead>
-    <tbody>
-        
-        <% if (arrayPiloto.length> 0) { %>
-            <!--Haremos el foreach para recorrer el array-->
-            <% arrayPiloto.forEach(piloto => { %>
-                <tr>
-                    <td><%= piloto.nombre %></td>
-                    <td><%= piloto.pais %></td>
-                    <td><%= piloto.num_Carreras %></td>
-                    <td><%= piloto.victoria %></td>
-                    <td><%= piloto.podio %></td>
-                    <td><%= piloto.dorsal %></td>
-                    <td><%= piloto.escuderia %></td>
-                </tr>
-            <% }) %>
-        <% } %>
-  </tbody>
-</table>
-<a class="nav-link" href="/">Volver al inicio</a>
+
+    <div class="container">
+        <div>
+            <img src="img/mercedes.png" alt="rb" id="img">
+        </div>
+        <div class="container2">
+            <% if (arrayEscuderia.length> 0) { %>
+                <!--Haremos el foreach para recorrer el array-->
+                <% arrayEscuderia.forEach(escuderia=> { %>
+                    <p>La escuderia <%= escuderia.nombre %> es una de las automotrices más exitosas de la Fórmula 1,
+                            considerada
+                            uno de los cuatro equipos con mejores resultados, junto con Williams, Ferrari y McLaren. Su
+                            fundacion dió lugar en <%= escuderia.fundacion %>.
+                    </p>
+
+                    <p>Con sede en <%= escuderia.pais %>, este año intentarán luchar el campeonato con su mejorado motor
+                            <%= escuderia.motor %>.</p>
+                    <% }) %>
+                        <% } %>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Pais</th>
+                <th scope="col">Num_Carrera</th>
+                <th scope="col">Victorias</th>
+                <th scope="col">Podios</th>
+                <th scope="col">Dorsal</th>
+                <th scope="col">Escuderia</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% if (arrayPiloto.length> 0) { %>
+                <!--Haremos el foreach para recorrer el array-->
+                <% arrayPiloto.forEach(piloto=> { %>
+                    <tr>
+                        <td>
+                            <%= piloto.nombre %>
+                        </td>
+                        <td>
+                            <%= piloto.pais %>
+                        </td>
+                        <td>
+                            <%= piloto.num_Carreras %>
+                        </td>
+                        <td>
+                            <%= piloto.victoria %>
+                        </td>
+                        <td>
+                            <%= piloto.podio %>
+                        </td>
+                        <td>
+                            <%= piloto.dorsal %>
+                        </td>
+                        <td>
+                            <%= piloto.escuderia %>
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <% } %>
+        </tbody>
+    </table>
+    <a class="nav-link" href="/">Volver al inicio</a>

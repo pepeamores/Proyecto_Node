@@ -1,5 +1,6 @@
 const express = require('express');
 const Piloto = require('../models/piloto');
+const Escuderia = require('../models/escuderia');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -8,9 +9,11 @@ router.get('/', async (req, res) => {
         //los datos que vienen de la base de datos
         //con respecto al arrayPokemon que tenemos EN LA VISTA
         const arrayPilotoDB = await Piloto.find({escuderia:'Mercedes'});
+        const arrayEscuderiaDB = await Escuderia.find({nombre:'Mercedes'});
         console.log(arrayPilotoDB);
         res.render("mercedes", { 
-            arrayPiloto: arrayPilotoDB
+            arrayPiloto: arrayPilotoDB,
+            arrayEscuderia: arrayEscuderiaDB
         })
     } catch (error) {
         console.error(error)
