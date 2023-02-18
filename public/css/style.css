@@ -12,11 +12,20 @@ section{
     float: left;
     width: 100%;
 }
+
 .container{
     width: 100%;
     padding: 10px;
 }
-
+.p3{
+    color: black;
+}
+.bg3{
+    margin-top: 5%;
+}
+.bg4{
+    margin-top: 3%;
+}
 .bg2{
     width: 100%;
     margin-left: 20vw;
