@@ -1,4 +1,5 @@
 <%- include("template/cabecera", {tituloWeb: 'Campeonato' }) %>
+
 <style>
     body{
         background-image: url("/img/fondo13.jpg");
@@ -9,7 +10,7 @@
     }
 </style>
 <div class="table-responsive">
-    <table class="table align-middle">
+    <table class="table align-middle ">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Temporada</th>
@@ -25,19 +26,19 @@
                 <% arrayCampeonato.forEach(campeonato=> { %>
                     <tr>
                         <td>
-                            <%= campeonato.nombre %>
+                            <%= campeonato.temporada %>
                         </td>
                         <td>
-                            <%= campeonato.pais %>
+                            <%= campeonato.piloto_campeon %>
                         </td>
                         <td>
-                            <%= campeonato.ciudad %>
+                            <%= campeonato.puntos_piloto %>
                         </td>
                         <td>
-                            <%= campeonato.kilometros %>
+                            <%= campeonato.escuderia_campeon %>
                         </td>
                         <td>
-                            <%= campeonato.curvas %>
+                            <%= campeonato.puntos_escuderia %>
                         </td>
                     </tr>
                     <% }) %>
