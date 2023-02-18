@@ -5,7 +5,6 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
         const arrayCampeonatoDB = await Campeonato.find();
-        console.log(arrayCampeonatoDB);
         res.render("campeonato", { 
             arrayCampeonato: arrayCampeonatoDB
         })

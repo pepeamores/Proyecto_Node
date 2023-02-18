@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
         const arrayCircuitoDB = await Circuito.find();
-        console.log(arrayCircuitoDB);
+
         res.render("circuito", { 
             arrayCircuito: arrayCircuitoDB
         })

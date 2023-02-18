@@ -7,7 +7,6 @@ router.get('/', async (req, res) => {
     try {
         const arrayPilotoDB = await Piloto.find({escuderia:'Williams'});
         const arrayEscuderiaDB = await Escuderia.find({nombre:'Williams'});
-        console.log(arrayPilotoDB);
         res.render("williams", { 
             arrayPiloto: arrayPilotoDB,
             arrayEscuderia: arrayEscuderiaDB
