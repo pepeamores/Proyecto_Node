@@ -1,3 +1,3 @@
 # Proyecto_Node
-Distribución de trabajo del equipo:
-Jose Amores: Conexion Base de Datos y node js
+En este trabajo final de node js hemos hecho una web de formula 1 en la cual podemos ver cada escuderia que hay en la formula 1 tambien todos los circuitos y los campeonatos que ha habido en los ultimos años. La web se conecta con mongo db para guardar en crud toda la informacion necesaria como los pilotos, las escuderias, los campeonatos y las escuderia. Tambien hemos filtrado en cada pagina de escuderias para que salgan los pilotos y la información de esta propia.
+En la distribución de trabajo que hemos hecho  ha sido que los 3 hemos hecho lo mismo nos hemos repartido para completar toda las estructura de models, public, router, views y app.js
