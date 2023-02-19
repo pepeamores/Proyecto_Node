@@ -1,9 +1,12 @@
 header{
     background-color: white;
     border: 2px solid red;
-    border-radius: 5px;
+   
 }
-
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}
 section{
     background-color: red;
     color: white;
@@ -116,6 +119,7 @@ section{
     color: rgb(255, 255, 255);
     padding: 10px;
     font-size: 25px;
+    float: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .ca{
