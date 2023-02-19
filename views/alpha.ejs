@@ -1,5 +1,6 @@
 <%- include("template/cabecera", {tituloWeb: 'Alpha Tauri' }) %>
     <style>
+        
         body {
             background-image: url("/img/fondo6.jpg");
             background-attachment: fixed;
@@ -7,17 +8,21 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .at2023{
+        width: 35%;
+        margin-left: 35%;
+    }
     </style>
     <div class="container">
         <div class="bg col-6">
             <% if (arrayEscuderia.length> 0) { %>
                 <!--Haremos el foreach para recorrer el array-->
                 <% arrayEscuderia.forEach(escuderia=> { %>
-                    <p class="text-white">La escuderia <%= escuderia.nombre %> es la sucesora de Toro Rosso, nacio en <%= escuderia.fundacion %>.
+                    <p class="text-white bg-dark p-1">La escuderia <%= escuderia.nombre %> es la sucesora de Toro Rosso, nacio en <%= escuderia.fundacion %>.
                         Siempre han tenido actuaciones buenas, pero su principal objetivo es ayudar a Red Bull
                     </p>
 
-                    <p class="text-white">Con sede en <%= escuderia.pais %>, este año intentarán luchar por liderar la tabla media
+                    <p class="text-white bg-dark p-1">Con sede en <%= escuderia.pais %>, este año intentarán luchar por liderar la tabla media
                             con su
                             mejorado motor
                             <%= escuderia.motor %>. El equipo <%= escuderia.nombre %> tuvo problemas el año pasado pero
@@ -29,11 +34,12 @@
     <br>
 <br>
 <br>
+<img src="/img/at2023.png" alt="Alpha Tauri 2023" class="at2023">
 <br>
 <br>
 <br>
     <div class="table-responsive">
-        <table class=" text-white table align-middle">
+        <table class=" text-white table align-middle bg-dark p-1">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Nombre Piloto</th>

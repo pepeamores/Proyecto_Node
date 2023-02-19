@@ -1,20 +1,27 @@
 <%- include("template/cabecera", {tituloWeb: 'Williams' }) %>
     <style>
+        *{
+            color: black;
+        }
         body {
             background-image: url("/img/fondo10.jpg");
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            color: black;
         }
+        .w2023{
+        width: 35%;
+        margin-left: 35%;
+    }
     </style>
+    <br><br>
     <div class="container">
         <div class="bg col-6">
             <% if (arrayEscuderia.length> 0) { %>
                 <!--Haremos el foreach para recorrer el array-->
                 <% arrayEscuderia.forEach(escuderia=> { %>
-                    <p class="text-white">
+                    <p class="text-black bg-primary p-1">
                         <%= escuderia.nombre %> es una escudería creada en <%= escuderia.pais %> de Fórmula 1, fué
                                 fundada en <%= escuderia.fundacion %> es considerada uno de los cuatro grandes equipos
                                     de Fórmula 1, junto con Ferrari, McLaren y Mercedes.​ Con su motor <%= escuderia.motor %> intentaran salir de los ultimos puestos.
@@ -29,6 +36,7 @@
 <br>
 <br>
 <br>
+<img src="/img/w2023.png" alt="Williams 2023" class="w2023">
 <br>
 <br>
 <br>
@@ -36,7 +44,7 @@
 <br>
 
     <div class="table-responsive">
-        <table class=" text-white table align-middle">
+        <table class=" text-white table align-middle bg-primary p-1">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Nombre Piloto</th>

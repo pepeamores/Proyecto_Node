@@ -1,25 +1,32 @@
 <%- include("template/cabecera", {tituloWeb: 'Alpine' }) %>
 <style>
+    *{
+        color: black;
+    }
     body{
-        background-image: url("/img/fondo3.jpg");
+        background-image: url("/img/fondo3.png");
         background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
+    }
+    .a2023{
+        width: 35%;
+        margin-left: 35%;
     }
 </style>
+<br><br><br>
 <div class="container">        
     <div class="bg4 bg col-6">
         <% if (arrayEscuderia.length> 0) { %>
             <!--Haremos el foreach para recorrer el array-->
             <% arrayEscuderia.forEach(escuderia=> { %>
-                <p class="text-white">La escuderia <%= escuderia.nombre %> es una de las escuderias mas nuevas en la Fórmula
+                <p class="text-white bg-primary p-1">La escuderia <%= escuderia.nombre %> es una de las escuderias mas nuevas en la Fórmula
                         1,
                         <%= escuderia.nombre %> es hija de renault la cual dejo a Alpine ser la cara de renault en la F1 desde <%= escuderia.fundacion %>.
                 </p>
 
-                <p class="text-white">Con sede en <%= escuderia.pais %>, este año intentarán por alcanzar el top 3, con su motor
+                <p class="text-white bg-primary p-1">Con sede en <%= escuderia.pais %>, este año intentarán por alcanzar el top 3, con su motor
                         <%= escuderia.motor %> el año pasado tuvieron muchos problemas de fiabilidad y creen haber mejorado en este aspecto pero no en su rendimiento.</p>
                 <% }) %>
                     <% } %>
@@ -28,11 +35,12 @@
 <br>
 <br>
 <br>
+<img src="/img/a2023.png" alt="Alpine 2023" class="a2023">
 <br>
 <br>
 <br>
 <div class="table-responsive">
-    <table class="text-white  table align-middle">
+    <table class="text-white  table align-middle bg-primary p-1">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Nombre Piloto</th>

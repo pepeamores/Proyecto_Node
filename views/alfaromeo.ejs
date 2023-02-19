@@ -7,13 +7,17 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .ar2023{
+        width: 35%;
+        margin-left: 35%;
+    }
     </style>
     <div class="container">
         <div class="bg col-6">
             <% if (arrayEscuderia.length> 0) { %>
                 <!--Haremos el foreach para recorrer el array-->
                 <% arrayEscuderia.forEach(escuderia=> { %>
-                    <p class="text-black">La escuderia <%= escuderia.nombre %> es una de las automotrices más nuevas 
+                    <p class="text-white bg-danger p-1">La escuderia <%= escuderia.nombre %> es una de las automotrices más nuevas 
                             de la
                             Fórmula
                             1,
@@ -21,7 +25,7 @@
                             fundacion dió lugar en <%= escuderia.fundacion %>.
                     </p>
 
-                    <p class="text-black">Con sede en <%= escuderia.pais %>, este año intentarán luchar por liderar la tabla media con su
+                    <p class="text-white bg-danger p-1">Con sede en <%= escuderia.pais %>, este año intentarán luchar por liderar la tabla media con su
                             mejorado motor
                             <%= escuderia.motor %>. El equipo <%= escuderia.nombre %> tuvo muchos problemas el año pasado y esperan mejorar su rendimiento.</p>
                     <% }) %>
@@ -31,11 +35,12 @@
     <br>
 <br>
 <br>
+<img src="/img/ar2023.png" alt="Alfa Romeo 2023" class="ar2023">
 <br>
 <br>
 <br>
     <div class="table-responsive">
-        <table class=" text-black table align-middle">
+        <table class=" text-white table align-middle bg-danger p-1">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Nombre Piloto</th>
